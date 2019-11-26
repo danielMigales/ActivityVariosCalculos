@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ActivityVariosCalculos</string>
+    <string name="areas">Areas</string>
+    <string name="calculadora_geometrica">Calculadora Geometrica</string>
+    <string name="volumenes">Volumenes</string>
+    <string name="perimetros">Perimetros</string>
+    <string name="teorema_de_pitagoras">Teorema de Pitagoras</string>
+
+    <string name="Calcular">Button</string>
+    <string name="introduzca_el_primer_valor">Introduzca el primer valor</string>
+    <string name="resultado">Resultado</string>
+    <string name="introduzca_el_segundo_valor">Introduzca el segundo valor</string>
+    <string name="calculo_del_area">Calculo del area</string>
+    <string name="textview1" />
+    <string name="Radio" />
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+</resources>

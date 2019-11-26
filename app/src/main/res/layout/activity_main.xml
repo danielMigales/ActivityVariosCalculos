@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/botonPerimetros"
+        android:layout_width="155dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="226dp"
+        android:text="@string/perimetros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonArea"
+        android:layout_width="155dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="197dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="439dp"
+        android:text="@string/areas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonVolumenes"
+        android:layout_width="155dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="302dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="334dp"
+        android:text="@string/volumenes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonPitagoras"
+        android:layout_width="155dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="522dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="114dp"
+        android:text="@string/teorema_de_pitagoras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="321dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="590dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/calculadora_geometrica"
+        android:textColor="#FFAB00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

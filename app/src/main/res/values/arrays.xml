@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones" >
+    <item>Triangulo</item>
+    <item>Circulo</item>
+    <item>Cuadrado</item>
+    <item>Rectangulo</item>
+</string-array>
+</resources>
