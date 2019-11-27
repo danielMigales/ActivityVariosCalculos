@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import static com.example.activityvarioscalculos.LoginActivity.*;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button boton;
+    private TextView bienvenida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +52,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,0); }
         });
 
+        Intent intent = getIntent();
+        String nombre = getIntent().getStringExtra("nombre");
 
-
+        bienvenida = (TextView) findViewById(R.id.textViewBienvenida);
+        bienvenida.setText("Hola, " + nombre);
     }
-}
+
+        }
+

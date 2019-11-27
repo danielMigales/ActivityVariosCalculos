@@ -6,8 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ActivityCalculoPerimetro">
 
+    <TextView
+        android:id="@+id/casillaResultado"
+        style="@style/CasillaResultado"
+        android:layout_width="319dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="551dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="97dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Resultado"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonCalcular"
+        android:layout_width="237dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="395dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="232dp"
+        android:text="CALCULAR PERIMETRO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
-        android:id="@+id/casillaAltura2"
+        android:id="@+id/casillaAltura"
         android:layout_width="136dp"
         android:layout_height="44dp"
         android:layout_marginStart="221dp"
@@ -22,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tituloValor3"
+        android:id="@+id/tituloValor2"
         android:layout_width="146dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -37,7 +69,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/casillaBase2"
+        android:id="@+id/casillaBase"
         android:layout_width="138dp"
         android:layout_height="44dp"
         android:layout_marginStart="221dp"
@@ -67,7 +99,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerFiguras"
         android:layout_width="262dp"
         android:layout_height="36dp"
         android:layout_marginStart="74dp"
