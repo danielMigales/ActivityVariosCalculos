@@ -11,56 +11,64 @@
         android:layout_width="136dp"
         android:layout_height="44dp"
         android:layout_marginTop="314dp"
+        android:layout_marginEnd="54dp"
         android:layout_marginBottom="373dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="221dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/casillaBase3"
         android:layout_width="138dp"
         android:layout_height="44dp"
         android:layout_marginTop="239dp"
+        android:layout_marginEnd="54dp"
         android:layout_marginBottom="448dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="219dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/casillaResultadoTeorema"
         style="@style/CasillaResultado"
         android:layout_width="319dp"
         android:layout_height="83dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="571dp"
+        android:layout_marginEnd="42dp"
         android:layout_marginBottom="77dp"
         android:fontFamily="sans-serif-black"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="50dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tituloValorBase3"
         android:layout_width="149dp"
         android:layout_height="45dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="238dp"
         android:layout_marginBottom="448dp"
         android:text="@string/introduzca_el_primer_valor"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="50dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/botonCalcularPerimetro3"
         android:layout_width="237dp"
         android:layout_height="104dp"
+        android:layout_marginStart="86dp"
         android:layout_marginTop="415dp"
+        android:layout_marginEnd="88dp"
         android:layout_marginBottom="212dp"
         android:backgroundTint="#FFAB00"
         android:fontFamily="casual"
@@ -68,8 +76,9 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="86dp"
         tools:text="CALCULAR" />
 
     <Spinner
@@ -89,19 +98,22 @@
         android:id="@+id/tituloValorAltura3"
         android:layout_width="146dp"
         android:layout_height="50dp"
+        android:layout_marginStart="49dp"
         android:layout_marginTop="314dp"
         android:layout_marginBottom="367dp"
         android:text="@string/introduzca_el_segundo_valor"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="49dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tituloPrincipal2"
         android:layout_width="263dp"
         android:layout_height="79dp"
+        android:layout_marginStart="74dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="37dp"
         android:layout_marginBottom="619dp"
         android:lineSpacingExtra="8sp"
         android:text="@string/calculo_del_teorema_de_pitagoras"
