@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,0); }
         });
 
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         String nombre = getIntent().getStringExtra("nombre");
 
         bienvenida = (TextView) findViewById(R.id.textViewBienvenida);

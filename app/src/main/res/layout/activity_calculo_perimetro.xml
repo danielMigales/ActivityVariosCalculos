@@ -7,7 +7,7 @@
     tools:context=".ActivityCalculoPerimetro">
 
     <TextView
-        android:id="@+id/casillaResultado"
+        android:id="@+id/casillaResultadoPerimetro"
         style="@style/CasillaResultado"
         android:layout_width="319dp"
         android:layout_height="83dp"
@@ -25,14 +25,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/botonCalcular"
+        android:id="@+id/botonCalcularPerimetro"
         android:layout_width="237dp"
         android:layout_height="104dp"
         android:layout_marginStart="87dp"
         android:layout_marginTop="395dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="232dp"
+        android:fontFamily="casual"
         android:text="CALCULAR PERIMETRO"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tituloValor2"
+        android:id="@+id/tituloValorAltura"
         android:layout_width="146dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -84,7 +86,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tituloValor"
+        android:id="@+id/tituloValorBase"
         android:layout_width="149dp"
         android:layout_height="45dp"
         android:layout_marginStart="50dp"

@@ -12,25 +12,24 @@ import android.widget.TextView;
 
 public class ActivityCalculoPerimetro extends AppCompatActivity {
 
-    private Button botonCalcular;
+    private Button botonCalcularPerimetro;
     private TextView resultado;
     private EditText base;
     private EditText altura;
-    private Spinner selector;
+    private Spinner selectorFiguras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculo_perimetro);
 
-        Button botonCalcular = findViewById(R.id.botonCalcular);
+        Button botonCalcular = findViewById(R.id.botonCalcularPerimetro);
         botonCalcular.setOnClickListener(myListener);
 
-        resultado = (TextView) findViewById (R.id.casillaResultado);
+        resultado = (TextView) findViewById (R.id.casillaResultadoPerimetro);
         base = findViewById (R.id.casillaBase);
         altura = findViewById (R.id.casillaAltura);
-        selector = (Spinner) findViewById(R.id.spinner);
-        //selector.setOnItemSelectedListener(this);
+        selectorFiguras = (Spinner) findViewById(R.id.spinnerFiguras);
     }
 
     private View.OnClickListener myListener = new View.OnClickListener() {;
@@ -49,26 +48,27 @@ public class ActivityCalculoPerimetro extends AppCompatActivity {
 
     public void CambiarMensaje ( View v){
 
-        String calculo = String.valueOf(calculoArea());
-        String mensajeFinal = String.format("El area es %s", calculo);
+        String calculo = String.valueOf(calculoPerimetro());
+        String mensajeFinal = String.format("El perimetro es %s", calculo);
         resultado.setText(mensajeFinal);
     }
 
-    public double calculoArea(){
+    public double calculoPerimetro(){
 
-        String seleccion = String.valueOf(selector.getSelectedItem());
+        String seleccion = String.valueOf(selectorFiguras.getSelectedItem());
         double valorBase = Double.parseDouble(String.valueOf(base.getText()));
         double valorAltura = Double.parseDouble(String.valueOf(altura.getText()));
 
         switch (seleccion) {
             case "Triangulo":
-                return (valorBase * valorAltura)/2;
+                int hipotenusa = (int) Math.sqrt((valorBase*valorBase)+(valorAltura*valorAltura));
+                return valorBase + valorAltura + hipotenusa;
             case "Cuadrado":
-                return (valorBase * valorAltura);
+                return 4 * valorBase;
             case "Rectangulo":
-                return (valorBase * valorAltura);
+                return 2*(valorBase + valorAltura);
             case "Circulo":
-                return (3.1416 * Math.pow(valorBase,2));
+                return 2*Math.PI*valorBase;
             default:
                 throw new IllegalStateException("Unexpected value: " + seleccion);
         }

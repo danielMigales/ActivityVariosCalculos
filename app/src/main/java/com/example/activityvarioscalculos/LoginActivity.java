@@ -12,6 +12,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button boton;
     private TextView nombre;
+    private TextView password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +20,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         boton =(Button) findViewById(R.id.botonLogin);
-        nombre = (TextView) findViewById(R.id.TextviewNombreUsuario);
+        nombre = (TextView) findViewById(R.id.textviewNombreUsuario);
+        password = (TextView) findViewById(R.id.textviewPassword);
         boton.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.putExtra("nombre", nombre.getText());
+                intent.putExtra("nombre", nombre.getText().toString());
                 startActivityForResult(intent,0); }
         });
     }
