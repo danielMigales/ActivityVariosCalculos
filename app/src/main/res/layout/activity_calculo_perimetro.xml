@@ -16,7 +16,6 @@
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="97dp"
         android:fontFamily="sans-serif-black"
-        android:text="Resultado"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,13 +31,17 @@
         android:layout_marginTop="395dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="232dp"
+        android:backgroundTint="#FFAB00"
         android:fontFamily="casual"
-        android:text="CALCULAR PERIMETRO"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="CALCULAR" />
 
     <EditText
         android:id="@+id/casillaAltura"
@@ -123,7 +126,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="664dp"
-        android:text="Calculo del Perimetro"
+        android:text="@string/calculo_del_perimetro"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

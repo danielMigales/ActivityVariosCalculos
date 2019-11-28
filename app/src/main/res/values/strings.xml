@@ -5,10 +5,8 @@
     <string name="volumenes">Volumenes</string>
     <string name="perimetros">Perimetros</string>
     <string name="teorema_de_pitagoras">Teorema de Pitagoras</string>
-
     <string name="Calcular">Button</string>
     <string name="introduzca_el_primer_valor">Introduzca el primer valor</string>
-    <string name="resultado">Resultado</string>
     <string name="introduzca_el_segundo_valor">Introduzca el segundo valor</string>
     <string name="calculo_del_area">Calculo del area</string>
     <string name="textview1" />
@@ -22,6 +20,13 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-
-
+    <string name="bienvenida">Bienvenida</string>
+    <string name="pitagoras">PITAGORAS</string>
+    <string name="calculo_del_volumen">Calculo del volumen</string>
+    <string name="password">Password</string>
+    <string name="nombre">Nombre</string>
+    <string name="login">LOGIN</string>
+    <string name="calculo_del_teorema_de_pitagoras">Calculo del Teorema de Pitagoras</string>
+    <string name="resultado">Resultado</string>
+    <string name="calculo_del_perimetro">Calculo del Perimetro</string>
 </resources>

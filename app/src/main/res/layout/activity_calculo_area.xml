@@ -31,11 +31,15 @@
         android:layout_marginTop="395dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="232dp"
-        android:text="CALCULAR AREA"
+        android:backgroundTint="#FFAB00"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="CALCULAR" />
 
     <TextView
         android:id="@+id/tituloValor1"
@@ -53,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/casillaResultado"
+        android:id="@+id/casillaResultadoArea"
         style="@style/CasillaResultado"
         android:layout_width="319dp"
         android:layout_height="83dp"
@@ -62,7 +66,6 @@
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="97dp"
         android:fontFamily="sans-serif-black"
-        android:text="Resultado"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"

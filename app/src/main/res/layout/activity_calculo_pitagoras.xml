@@ -6,15 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".ActivityCalculoPitagoras">
 
+    <EditText
+        android:id="@+id/casillaAltura3"
+        android:layout_width="136dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginBottom="373dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="221dp" />
+
+    <EditText
+        android:id="@+id/casillaBase3"
+        android:layout_width="138dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginBottom="448dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="219dp" />
+
+    <TextView
+        android:id="@+id/casillaResultadoTeorema"
+        style="@style/CasillaResultado"
+        android:layout_width="319dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="571dp"
+        android:layout_marginBottom="77dp"
+        android:fontFamily="sans-serif-black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <TextView
+        android:id="@+id/tituloValorBase3"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginBottom="448dp"
+        android:text="@string/introduzca_el_primer_valor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <Button
+        android:id="@+id/botonCalcularPerimetro3"
+        android:layout_width="237dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="415dp"
+        android:layout_marginBottom="212dp"
+        android:backgroundTint="#FFAB00"
+        android:fontFamily="casual"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="86dp"
+        tools:text="CALCULAR" />
+
+    <Spinner
+        android:id="@+id/spinnerFiguras3"
+        android:layout_width="262dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginBottom="542dp"
+        android:entries="@array/opciones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tituloValorAltura3"
+        android:layout_width="146dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginBottom="367dp"
+        android:text="@string/introduzca_el_segundo_valor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="49dp" />
+
     <TextView
         android:id="@+id/tituloPrincipal2"
-        android:layout_width="272dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="664dp"
-        android:text="Calculo del Teorema de Pitagoras"
+        android:layout_width="263dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="619dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/calculo_del_teorema_de_pitagoras"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

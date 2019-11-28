@@ -27,7 +27,7 @@ public class ActivityCalculoArea extends AppCompatActivity {
             Button botonCalcular = findViewById(R.id.botonCalcular);
             botonCalcular.setOnClickListener(myListener);
 
-            resultado = (TextView) findViewById (R.id.casillaResultado);
+            resultado = (TextView) findViewById (R.id.casillaResultadoArea);
             base = findViewById (R.id.casillaBase);
             altura = findViewById (R.id.casillaAltura);
             selector = (Spinner) findViewById(R.id.spinner);
