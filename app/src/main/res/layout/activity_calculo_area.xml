@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/botonCalcular"
+        android:id="@+id/botonCalcularArea"
         android:layout_width="237dp"
         android:layout_height="104dp"
         android:layout_marginStart="87dp"
@@ -32,6 +32,8 @@
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="232dp"
         android:backgroundTint="#FFAB00"
+        android:fontFamily="casual"
+        android:text="Calcular"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -49,7 +51,7 @@
         android:layout_marginTop="190dp"
         android:layout_marginEnd="212dp"
         android:layout_marginBottom="496dp"
-        android:text="@string/introduzca_el_primer_valor"
+        android:text="Base"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,6 +68,7 @@
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="97dp"
         android:fontFamily="sans-serif-black"
+        android:text="Resultado"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +84,7 @@
         android:layout_marginTop="264dp"
         android:layout_marginEnd="215dp"
         android:layout_marginBottom="417dp"
-        android:text="@string/introduzca_el_segundo_valor"
+        android:text="Altura"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -61,10 +61,9 @@ public class ActivityCalculoPerimetro extends AppCompatActivity {
 
         switch (seleccion) {
             case "Triangulo":
-                int hipotenusa = (int) Math.sqrt((valorBase*valorBase)+(valorAltura*valorAltura));
-                return valorBase + valorAltura + hipotenusa;
+                return valorBase + valorAltura + valorAltura;
             case "Cuadrado":
-                return 4 * valorBase;
+                return 2*(valorBase + valorAltura);
             case "Rectangulo":
                 return 2*(valorBase + valorAltura);
             case "Circulo":
