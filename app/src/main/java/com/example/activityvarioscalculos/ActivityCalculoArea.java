@@ -2,6 +2,7 @@ package com.example.activityvarioscalculos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +18,8 @@ public class ActivityCalculoArea extends AppCompatActivity {
         private EditText base;
         private EditText altura;
         private Spinner selector;
+        private TextView valor1;
+        private TextView valor2;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +33,27 @@ public class ActivityCalculoArea extends AppCompatActivity {
             resultado = (TextView) findViewById (R.id.casillaResultadoArea);
             base = findViewById (R.id.casillaBase);
             altura = findViewById (R.id.casillaAltura);
+            valor1 = findViewById (R.id.tituloValor1);
+            valor2 = findViewById (R.id.tituloValorAltura);
             selector = (Spinner) findViewById(R.id.spinner);
-            //selector.setOnItemSelectedListener(this);
+
+            selector.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    String seleccion = String.valueOf(selector.getSelectedItem());
+                    if (seleccion.equals("Circulo")){
+                        altura.setEnabled(false);
+                        altura.setFocusable(false);
+                        altura.setCursorVisible(false);
+                        altura.setKeyListener(null);
+                        altura.setBackgroundColor(Color.TRANSPARENT);
+                        valor1.setText("Radio");
+                        valor2.setText("");
+                    }
+                }
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
         }
 
         private View.OnClickListener myListener = new View.OnClickListener() {;
@@ -73,8 +95,5 @@ public class ActivityCalculoArea extends AppCompatActivity {
                 default:
                     throw new IllegalStateException("Unexpected value: " + seleccion);
             }
-
-
         }
-
     }
