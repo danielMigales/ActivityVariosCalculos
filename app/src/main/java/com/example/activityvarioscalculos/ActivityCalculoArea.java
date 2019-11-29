@@ -83,6 +83,7 @@ public class ActivityCalculoArea extends AppCompatActivity {
             double valorBase = Double.parseDouble(String.valueOf(base.getText()));
             double valorAltura = Double.parseDouble(String.valueOf(altura.getText()));
 
+
             switch (seleccion) {
                 case "Triangulo":
                     return (valorBase * valorAltura)/2;
@@ -91,6 +92,7 @@ public class ActivityCalculoArea extends AppCompatActivity {
                 case "Rectangulo":
                     return (valorBase * valorAltura);
                 case "Circulo":
+
                     return (3.1416 * Math.pow(valorBase,2));
                 default:
                     throw new IllegalStateException("Unexpected value: " + seleccion);
