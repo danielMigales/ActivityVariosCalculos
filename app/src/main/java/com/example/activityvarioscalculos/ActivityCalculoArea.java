@@ -33,9 +33,13 @@ public class ActivityCalculoArea extends AppCompatActivity {
             resultado = (TextView) findViewById (R.id.casillaResultadoArea);
             base = findViewById (R.id.casillaBase);
             altura = findViewById (R.id.casillaAltura);
-            valor1 = findViewById (R.id.tituloValor1);
+            valor1 = findViewById (R.id.tituloValorBase);
             valor2 = findViewById (R.id.tituloValorAltura);
             selector = (Spinner) findViewById(R.id.spinner);
+
+            //Con este selector hago que se oculte la entrada de texto si se selecciona circulo, ya que
+            //el circulo solo necesitamos el radio.
+            //SE TIENE QUE ARREGLAR QUE AL VOLVER DE ESA SELECCION EL CAMPO PERMANECE OCULTO PARA LAS DEMAS
 
             selector.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -49,6 +53,7 @@ public class ActivityCalculoArea extends AppCompatActivity {
                         valor1.setText("Radio");
                         valor2.setText("");
                     }
+
                 }
                 public void onNothingSelected(AdapterView<?> adapterView) {
 
@@ -77,12 +82,12 @@ public class ActivityCalculoArea extends AppCompatActivity {
             resultado.setText(mensajeFinal);
         }
 
+        //LOS CALCULOS SE HACEN EN ESTE METODO CON UN SWITCH SEGUN LA POSICION DEL SPINNER
         public double calculoArea(){
 
             String seleccion = String.valueOf(selector.getSelectedItem());
             double valorBase = Double.parseDouble(String.valueOf(base.getText()));
             double valorAltura = Double.parseDouble(String.valueOf(altura.getText()));
-
 
             switch (seleccion) {
                 case "Triangulo":

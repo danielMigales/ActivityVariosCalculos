@@ -27,7 +27,7 @@
         tools:text="CALCULAR" />
 
     <TextView
-        android:id="@+id/tituloValorAltura2"
+        android:id="@+id/tituloValorAltura"
         android:layout_width="146dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tituloValorBase2"
+        android:id="@+id/tituloValorBase"
         android:layout_width="149dp"
         android:layout_height="45dp"
         android:layout_marginStart="50dp"

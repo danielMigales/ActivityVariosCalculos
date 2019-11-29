@@ -31,14 +31,33 @@ public class ActivityCalculoVolumenes extends AppCompatActivity {
         resultado = (TextView) findViewById (R.id.casillaResultadoVolumen);
         base = findViewById (R.id.casillaBase);
         altura = findViewById (R.id.casillaAltura);
-        valor1 = findViewById (R.id.tituloValor1);
-        valor2 = findViewById (R.id.tituloValorAltura2);
+        valor1 = findViewById (R.id.tituloValorBase);
+        valor2 = findViewById (R.id.tituloValorAltura);
         selectorFiguras = (Spinner) findViewById(R.id.spinnerFiguras);
 
         selectorFiguras.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String seleccion = String.valueOf(selectorFiguras.getSelectedItem());
-                if (seleccion.equals("Esfera")){
+                if (seleccion.equals("Esfera")) {
+                    altura.setEnabled(false);
+                    altura.setFocusable(false);
+                    altura.setCursorVisible(false);
+                    altura.setKeyListener(null);
+                    altura.setBackgroundColor(Color.TRANSPARENT);
+                    altura.setText("");
+                    valor1.setText("Radio");
+                    valor2.setText("");
+                }
+                else if  (seleccion.equals("Cubo")){
+                    altura.setEnabled(false);
+                    altura.setFocusable(false);
+                    altura.setCursorVisible(false);
+                    altura.setKeyListener(null);
+                    altura.setBackgroundColor(Color.TRANSPARENT);
+                    valor1.setText("Arista");
+                    valor2.setText("");
+                }
+                else if (seleccion.equals("Cilindro")){
                     altura.setEnabled(false);
                     altura.setFocusable(false);
                     altura.setCursorVisible(false);
@@ -80,16 +99,16 @@ public class ActivityCalculoVolumenes extends AppCompatActivity {
         double valorBase = Double.parseDouble(String.valueOf(base.getText()));
         double valorAltura = Double.parseDouble(String.valueOf(altura.getText()));
 
+
         switch (seleccion) {
             case "Prisma":
-
+                return 5 * (valorBase * valorBase * valorAltura) / 2;
             case "Cilindro":
-
                 return Math.PI*(valorBase*valorBase)*valorAltura;
             case "Cubo":
-
+                return Math.pow(valorBase, 3);
             case "Esfera":
-                return ((4/3) * Math.PI*(valorBase*valorBase*valorBase));
+                return (4/3) * Math.PI*(valorBase*valorBase*valorBase);
             default:
                 throw new IllegalStateException("Unexpected value: " + seleccion);
         }

@@ -44,7 +44,7 @@
         tools:text="CALCULAR" />
 
     <TextView
-        android:id="@+id/tituloValor1"
+        android:id="@+id/tituloValorBase"
         android:layout_width="149dp"
         android:layout_height="45dp"
         android:layout_marginStart="50dp"

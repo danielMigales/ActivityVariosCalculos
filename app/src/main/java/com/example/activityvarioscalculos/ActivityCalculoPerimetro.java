@@ -2,6 +2,7 @@ package com.example.activityvarioscalculos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +18,8 @@ public class ActivityCalculoPerimetro extends AppCompatActivity {
     private EditText base;
     private EditText altura;
     private Spinner selectorFiguras;
+    private TextView valor1;
+    private TextView valor2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +29,30 @@ public class ActivityCalculoPerimetro extends AppCompatActivity {
         Button botonCalcular = findViewById(R.id.botonCalcularPerimetro);
         botonCalcular.setOnClickListener(myListener);
 
-        resultado = (TextView) findViewById (R.id.casillaResultadoPerimetro);
-        base = findViewById (R.id.casillaBase);
-        altura = findViewById (R.id.casillaAltura);
+        resultado = (TextView) findViewById(R.id.casillaResultadoPerimetro);
+        base = findViewById(R.id.casillaBase);
+        altura = findViewById(R.id.casillaAltura);
         selectorFiguras = (Spinner) findViewById(R.id.spinnerFiguras);
+        valor1 = findViewById(R.id.tituloValorBase);
+        valor2 = findViewById(R.id.tituloValorAltura);
+        selectorFiguras.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String seleccion = String.valueOf(selectorFiguras.getSelectedItem());
+                if (seleccion.equals("Circulo")) {
+                    altura.setEnabled(false);
+                    altura.setFocusable(false);
+                    altura.setCursorVisible(false);
+                    altura.setKeyListener(null);
+                    altura.setBackgroundColor(Color.TRANSPARENT);
+                    valor1.setText("Radio");
+                    valor2.setText("");
+                }
+            }
+
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private View.OnClickListener myListener = new View.OnClickListener() {;
@@ -38,7 +61,6 @@ public class ActivityCalculoPerimetro extends AppCompatActivity {
             CambiarMensaje(v);
         }
     };
-
 
     public void onItemSelected(AdapterView<?> parent, View v, int pos, long id)
     {
