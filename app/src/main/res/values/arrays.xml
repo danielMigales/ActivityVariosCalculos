@@ -13,4 +13,14 @@
         <item>Cubo</item>
         <item>Esfera</item>
     </string-array>
+
+    <string-array name="pitagoras" >
+        <item>Cateto Mayor</item>
+        <item>Cateto Menor</item>
+        <item>Hipotenusa</item>
+    </string-array>
+
+
+
+
 </resources>

@@ -53,8 +53,8 @@ public class ActivityCalculoArea extends AppCompatActivity {
                         valor1.setText("Radio");
                         valor2.setText("");
                     }
-
                 }
+
                 public void onNothingSelected(AdapterView<?> adapterView) {
 
                 }
@@ -97,7 +97,6 @@ public class ActivityCalculoArea extends AppCompatActivity {
                 case "Rectangulo":
                     return (valorBase * valorAltura);
                 case "Circulo":
-
                     return (3.1416 * Math.pow(valorBase,2));
                 default:
                     throw new IllegalStateException("Unexpected value: " + seleccion);
