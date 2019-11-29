@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
     tools:context=".MainActivity">
 
     <Button
@@ -87,8 +88,11 @@
         android:fontFamily="casual"
         android:text="@string/calculadora_geometrica"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFAB00"
         android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -97,13 +101,15 @@
 
     <TextView
         android:id="@+id/textViewBienvenida"
-        android:layout_width="182dp"
-        android:layout_height="30dp"
+        android:layout_width="265dp"
+        android:layout_height="28dp"
         android:layout_marginTop="44dp"
         android:layout_marginBottom="655dp"
         android:text="@string/bienvenida"
         android:textAlignment="textEnd"
-        android:textSize="14sp"
+        android:textColor="#ACE20F"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"

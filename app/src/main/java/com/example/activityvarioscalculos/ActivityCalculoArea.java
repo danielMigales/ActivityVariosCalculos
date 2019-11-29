@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -52,6 +53,14 @@ public class ActivityCalculoArea extends AppCompatActivity {
                         altura.setBackgroundColor(Color.TRANSPARENT);
                         valor1.setText("Radio");
                         valor2.setText("");
+                    }
+                    else {
+                        valor1.setText("Base");
+                        valor2.setText("Altura");
+                        altura.setEnabled(true);
+                        altura.setFocusable(true);
+                        altura.setCursorVisible(true);
+                        altura.setKeyListener(new DigitsKeyListener());
                     }
                 }
 
