@@ -1,10 +1,7 @@
 package com.example.activityvarioscalculos;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -16,11 +13,11 @@ public class ActivityCalculoArea extends AppCompatActivity {
 
         private Button botonCalcular;
         private TextView resultado;
-        private EditText base;
-        private EditText altura;
+        private EditText valorBase;
+        private EditText valorAltura;
         private Spinner selector;
-        private TextView valor1;
-        private TextView valor2;
+        private TextView tituloValorBase;
+        private TextView tituloValorAltura;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +29,12 @@ public class ActivityCalculoArea extends AppCompatActivity {
             botonCalcular.setOnClickListener(myListener);
 
             resultado = (TextView) findViewById (R.id.casillaResultadoArea);
-            base = findViewById (R.id.casillaBase);
-            altura = findViewById (R.id.casillaAltura);
-            valor1 = findViewById (R.id.tituloValorBase);
-            valor2 = findViewById (R.id.tituloValorAltura);
+            valorBase = findViewById (R.id.casillaBase);
+            valorAltura = findViewById (R.id.casillaAltura);
+            tituloValorBase = findViewById (R.id.tituloValorBase);
+            tituloValorAltura = findViewById (R.id.tituloValorAltura);
             selector = (Spinner) findViewById(R.id.spinner);
+
 
             //Con este selector hago que se oculte la entrada de texto si se selecciona circulo, ya que
             //el circulo solo necesitamos el radio.
@@ -44,21 +42,23 @@ public class ActivityCalculoArea extends AppCompatActivity {
 
             selector.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
                     String seleccion = String.valueOf(selector.getSelectedItem());
+
                     if (seleccion.equals("Circulo")){
-                        altura.setVisibility(View.INVISIBLE);
-                        valor1.setText("Radio");
-                        valor2.setText("");
+                        valorAltura.setVisibility(View.INVISIBLE);
+                        tituloValorBase.setText("Radio");
+                        tituloValorAltura.setText("");
                     }
                     else {
-                        valor1.setText("Base");
-                        valor2.setText("Altura");
-                        altura.setVisibility(View.VISIBLE);
+                        tituloValorBase.setText("Base");
+                        tituloValorAltura.setText("Altura");
+                        valorAltura.setVisibility(View.VISIBLE);
                     }
                 }
 
                 public void onNothingSelected(AdapterView<?> adapterView) {
-
+                    resultado.setText("Seleccione una figura.");
                 }
             });
         }
@@ -66,6 +66,7 @@ public class ActivityCalculoArea extends AppCompatActivity {
         private View.OnClickListener myListener = new View.OnClickListener() {;
 
             public void onClick(View v) {
+
                 CambiarMensaje(v);
             }
         };
@@ -74,7 +75,6 @@ public class ActivityCalculoArea extends AppCompatActivity {
         public void onItemSelected(AdapterView<?> parent, View v, int pos, long id)
         {
             String item = parent.getItemAtPosition(pos).toString();
-
         }
 
         public void CambiarMensaje ( View v){
@@ -88,18 +88,29 @@ public class ActivityCalculoArea extends AppCompatActivity {
         public double calculoArea(){
 
             String seleccion = String.valueOf(selector.getSelectedItem());
-            double valorBase = Double.parseDouble(String.valueOf(base.getText()));
-            double valorAltura = Double.parseDouble(String.valueOf(altura.getText()));
+            double valor1 = Double.parseDouble(String.valueOf(this.valorBase.getText()));
+            double valor2 = Double.parseDouble(String.valueOf(this.valorAltura.getText()));
+
+            if(valorAltura.getText().toString().isEmpty()){
+                resultado.setText("Introduzca un valor valido");
+                valor2 = 0;
+            }
+
+            if (valorAltura.getText().toString().trim().equalsIgnoreCase("")){
+                resultado.setText("Introduzca un valor valido");
+                valor2 = 0;
+            }
+
 
             switch (seleccion) {
                 case "Triangulo":
-                    return (valorBase * valorAltura)/2;
+                    return (valor1 * valor2)/2;
                 case "Cuadrado":
-                    return (valorBase * valorAltura);
+                    return (valor1 * valor2);
                 case "Rectangulo":
-                    return (valorBase * valorAltura);
+                    return (valor1 * valor2);
                 case "Circulo":
-                    return (3.1416 * Math.pow(valorBase,2));
+                    return (3.1416 * Math.pow(valor1,2));
                 default:
                     throw new IllegalStateException("Unexpected value: " + seleccion);
             }
