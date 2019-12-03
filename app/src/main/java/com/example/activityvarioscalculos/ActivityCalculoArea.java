@@ -46,21 +46,14 @@ public class ActivityCalculoArea extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     String seleccion = String.valueOf(selector.getSelectedItem());
                     if (seleccion.equals("Circulo")){
-                        altura.setEnabled(false);
-                        altura.setFocusable(false);
-                        altura.setCursorVisible(false);
-                        altura.setKeyListener(null);
-                        altura.setBackgroundColor(Color.TRANSPARENT);
+                        altura.setVisibility(View.INVISIBLE);
                         valor1.setText("Radio");
                         valor2.setText("");
                     }
                     else {
                         valor1.setText("Base");
                         valor2.setText("Altura");
-                        altura.setEnabled(true);
-                        altura.setFocusable(true);
-                        altura.setCursorVisible(true);
-                        altura.setKeyListener(new DigitsKeyListener());
+                        altura.setVisibility(View.VISIBLE);
                     }
                 }
 

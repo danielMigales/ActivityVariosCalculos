@@ -40,40 +40,24 @@ public class ActivityCalculoVolumenes extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String seleccion = String.valueOf(selectorFiguras.getSelectedItem());
                 if (seleccion.equals("Esfera")) {
-                    altura.setEnabled(false);
-                    altura.setFocusable(false);
-                    altura.setCursorVisible(false);
-                    altura.setKeyListener(null);
-                    altura.setBackgroundColor(Color.TRANSPARENT);
-                    altura.setText("");
+                    altura.setVisibility(View.INVISIBLE);
                     valor1.setText("Radio");
                     valor2.setText("");
                 }
                 else if  (seleccion.equals("Cubo")){
-                    altura.setEnabled(false);
-                    altura.setFocusable(false);
-                    altura.setCursorVisible(false);
-                    altura.setKeyListener(null);
-                    altura.setBackgroundColor(Color.TRANSPARENT);
+                    altura.setVisibility(View.INVISIBLE);
                     valor1.setText("Arista");
                     valor2.setText("");
                 }
                 else if (seleccion.equals("Cilindro")){
-                    altura.setEnabled(false);
-                    altura.setFocusable(false);
-                    altura.setCursorVisible(false);
-                    altura.setKeyListener(null);
-                    altura.setBackgroundColor(Color.TRANSPARENT);
+                    altura.setVisibility(View.INVISIBLE);
                     valor1.setText("Radio");
                     valor2.setText("");
                 }
                 else{
-                    altura.setEnabled(true);
-                    altura.setFocusable(true);
-                    altura.setCursorVisible(true);
+                    altura.setVisibility(View.VISIBLE);
                     valor1.setText("Base");
                     valor2.setText("Altura");
-                    altura.setKeyListener(new DigitsKeyListener());
                 }
             }
 
